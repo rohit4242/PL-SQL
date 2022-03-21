@@ -9,3 +9,4 @@ BEGIN
 	dbms_output.put_line('surname = '||surname);
 
 END;
+/

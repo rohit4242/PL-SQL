@@ -5,10 +5,14 @@ DECLARE
 BEGIN
 
     while n < 20 loop
-        dbms_output.put_line(n);
         n := n + 1;
-    end loop;
-    dbms_output.put_line('Done');
 
+        if n=13 then 
+            continue;
+        end if;
+
+        dbms_output.put_line(n);
+        
+    end loop;
 END;
 /

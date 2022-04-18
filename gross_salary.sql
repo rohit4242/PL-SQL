@@ -12,7 +12,8 @@ declare
 
 
 begin
-    select eid,ename,basicsal into employee_id,employee_name,basic_salary from emp10 where eid=1;
+    employee_id:=&empid;
+    select eid,ename,basicsal into employee_id,employee_name,basic_salary from emp10 where eid=employee_id;
 
     HRA:=(basic_salary*15)/100;
     DA:=(basic_salary*50)/100;

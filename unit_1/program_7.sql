@@ -4,4 +4,3 @@
 -- with Rollno, Name, Sub1, Sub2, Sub3, Sub4, Sub5,
 -- Total, Per, Grade attributes with appropriate data 
 -- type).
-

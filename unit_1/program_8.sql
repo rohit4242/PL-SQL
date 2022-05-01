@@ -1,0 +1,8 @@
+-- 8) Write a PL/SQL block which displays gross salary of 
+-- employees as per user input EID. (Consider EMP
+-- table with EID, EName, Deptno, Deptname Gender,
+-- Age, BasicSal) with appropriate data types.)
+-- Gross_Salary: BASICSAL + (DA + HRA + Medical) 
+-- – PF.
+-- Rules: HRA = 15% of basic, DA = 50% of basic, 
+-- Medical = Rs. 500, PF = 10% of basic.

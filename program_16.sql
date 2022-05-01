@@ -1,33 +1,14 @@
+-- write a pl/sql block that uses a cursor attribute sql%rowcount to raise the basic salary of employees by 10% that are working in department number 10 and also display the apporpriate message based on the existence to the record in the emp table (use implicit cursor).
 
-
-declare
-    pro_name varchar2(15);
-    qty number;
-    price number;
-    discount number:=10;
-    discount_amount number;
-    total number;
-    
-    final_payment number;
-
+declare 
 begin
 
-    pro_name:='&pro_name';
-    qty:=&qty;
-    price:=&price;
-
-    total := qty*price;
-    discount_amount := (total * discount)/100;
-    final_payment := total - discount_amount;
-
-    dbms_output.put_line('Your product name is: '|| pro_name);
-    dbms_output.put_line('Your total amount is: '||total);
-    dbms_output.put_line('Your total discount amount is: '||discount_amount);
-    dbms_output.put_line('Your final payment is: '|| final_payment);
-
+    update customer_rec set salary = salary * 1.1 where dept_no = 10;
+    if sql%found then
+        dbms_output.put_line('The salary of the employee is increased by 10%');
+    else
+        dbms_output.put_line('The employee does not exist');
+    end if;
 end;
 /
-
-
-
 

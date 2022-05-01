@@ -1,0 +1,3 @@
+-- 6) Write a program to generate the numbers using 
+-- LOOP, FOR LOOP and WHILE LOOP up to the 
+-- number inputted by user.

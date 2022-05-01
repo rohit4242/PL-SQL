@@ -1,0 +1,3 @@
+-- 9) Write a PL/SQL block which displays all records of 
+-- Male employees working in HR Dept from EMP 
+-- table.

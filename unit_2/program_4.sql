@@ -1,0 +1,3 @@
+-- 4) Write a PL/SQL block using a cursor FOR loop to 
+-- display name and the basic salary of top 3 highest 
+-- paid employees. (Use Cursor For Loop)

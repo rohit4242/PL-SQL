@@ -1,0 +1,4 @@
+-- 3) Write a PL/SQL block that uses a cursor attribute 
+-- %ROWCOUNT to display the name, department 
+-- and basic salary of first 5 employees getting the 
+-- highest basic salary. (Use Explicit Cursor)

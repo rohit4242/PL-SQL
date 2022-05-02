@@ -11,10 +11,13 @@ begin
     open c1;
     loop
         fetch c1 into r_row;
+        
         exit when i = 3;
         i := i + 1;
 
         dbms_output.put_line( r_row.id || ' ' ||r_row.name || ' ' || r_row.salary);
+        dbms_output.put_line('Rowcount: ' || c1%rowcount);
+
     end loop;
 
     close c1;

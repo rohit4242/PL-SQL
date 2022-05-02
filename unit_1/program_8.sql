@@ -7,6 +7,7 @@
 -- Rules: HRA = 15% of basic, DA = 50% of basic, 
 -- Medical = Rs. 500, PF = 10% of basic.
 
+
 DECLARE
     basic_salary emp10.basicsal%type;
     employee_id emp10.eid%type:=1;

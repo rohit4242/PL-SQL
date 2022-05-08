@@ -7,7 +7,7 @@ begin
     
     select eid into eid from employee;
     delete from employee where eid = eid;
-    
+
 end;
 /
 

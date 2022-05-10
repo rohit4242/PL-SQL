@@ -5,11 +5,10 @@ declare
 
 begin 
     temp := temp / 0;
-    dbms_output.put_line('the number is: '|| temp);
 
     exception
         when zero_divide then
             dbms_output.put_line('Error: zero divide');
-            
+
 end;
 /

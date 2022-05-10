@@ -26,5 +26,15 @@ begin
         dbms_output.put_line(r_row.product_id||' '||r_row.product_name||' '||r_row.list_price);
     end loop;
     close c_pro;
+    declare
+    temp varchar2(20);
+
+exception when too_many_rows then
+    dbms_output.put_line('error trying to select too many rows');
+exception when no_data_found then
+    dbms_output.put_line('No data found');
+exception when others then
+    dbms_output.put_line('some runtime error');
+
 end;
 /

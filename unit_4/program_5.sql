@@ -19,18 +19,17 @@ insert into account_1 values(5,'Rohit','ICICI',5000);
 create or replace function get_balance(acno in number)
 return number is
 begin
-    select balance from account_1 where acno = acno;
+    select balance into balance from account_1 where acno = acno;
     return balance;
-
 end;
 /
 
 declare
-    acno number(4);
-    balance number(10,2);
+    acno number;
+    balance number;
 begin
     acno:=1;
     balance:=get_balance(acno);
-    dbms_output.put_line('Balance for account no. '||acno||' is '||balance);
+    dbms_output.put_line("Balance for account number "||acno||" is "||balance);
 end;
 /

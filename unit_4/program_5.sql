@@ -16,20 +16,21 @@ insert into account_1 values(3,'Rohit','HDFC',3000);
 insert into account_1 values(4,'Rohit','SBI',4000);
 insert into account_1 values(5,'Rohit','ICICI',5000);
 
-create or replace function get_balance(acno in number)
+create or replace function get_balance(aacno in number)
 return number is
+balance number(10,2);
 begin
-    select balance into balance from account_1 where acno = acno;
+    select balance into balance from account_1 where acno = aacno;
     return balance;
 end;
 /
 
 declare
-    acno number;
-    balance number;
+    aacno number(4);
+    balance number(10,2);
 begin
-    acno:=1;
-    balance:=get_balance(acno);
-    dbms_output.put_line("Balance for account number "||acno||" is "||balance);
+    aacno:=1;
+    balance:=get_balance(aacno);
+    dbms_output.put_line(balance);
 end;
 /

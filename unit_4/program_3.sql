@@ -8,9 +8,22 @@
 create or replace procedure search_emp(emp_id in number,name out varchar2)
 is
 begin
-select name into name from employee where empno = emp_id;
+    select name into name from employee where empno = emp_id;
+    if name is null then
+        raise_application_error(-20001,'Employee not found');
+    end if;
 end;
 /
 
-exec search_emp(1,name);
+declare
+emp_id number;
+name varchar2(30);
+begin
+
+    emp_id:=1;
+    search_emp(emp_id,name);
+    dbms_output.put_line('Employee name is: '||name);
+
+end;
+/
 
